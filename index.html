@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            padding: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.35)0px 5px 15px;
+            background-color: blueviolet;
+        }
+
+
+        form :is(select, input) {
+            width: 100%;
+            border: none;
+        }
+
+        form :is(select~option) {
+            font-size: 1.2rem;
+        }
+
+        form :is(label) {
+            font-size: 1.3rem;
+            color: white;
+            font-weight: 400;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        form :is(.btn) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        form :is(button) {
+            border: none;
+            cursor: pointer;
+            padding: 0.3rem;
+            font-weight: 400;
+            font-size: 15px;
+            background-color: black;
+            color: white;
+        }
+
+        #pool_access {
+            position: relative;
+            top: -1rem;
+            right: 5rem;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="membership">
+                <label for="membership">Membership</label>
+                <select id="membership">
+                    <option value="Bronze">Bronze</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Gold">Gold</option>
+                </select>
+            </div>
+            <div class="pool">
+                <label for="pool_access">pool_access</label>
+                <input type="checkbox" id="pool_access">
+            </div>
+            <div class="months">
+                <label for="months">choose the number of moths</label>
+                <input type="number" id="months" max="12" min="1">
+            </div>
+            <div class="btn">
+                <button type="submit">Add up</button>
+            </div>
+        </form>
+    </div>
+    <script src="script/javasctript.js"></script>
+
+</body>
+
+</html>
